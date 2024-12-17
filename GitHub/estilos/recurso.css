@@ -1,0 +1,113 @@
+/* General resource */
+
+:root {
+    --NavBarHeight: 50px;
+    --outskirt-color: #ec890f;
+    --footer-height: 50px;
+}
+
+body {
+    margin: 0;
+}
+
+/* General resource */
+
+/* Menu style */
+
+.menu img {
+    height: var(--NavBarHeight);
+}
+
+#header {
+height: var(--NavBarHeight);
+}
+
+.menu {
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-color: var(--outskirt-color);
+    height: var(--NavBarHeight);
+    margin: 0;
+    position: sticky;
+    top: 0;
+}
+
+.menu_element {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+    display: inline-block;
+    padding: 8px 10px;
+    background-color: rgb(56, 33, 62);
+    border-radius: 9px;
+    transition: background-color 0.25s cubic-bezier(1, 0, 0, 0), color 0.25s cubic-bezier(1, 0, 0, 0);
+}
+
+.menu_element:hover, .active, .menu_element:focus {
+    background-color: #fff;
+    cursor: pointer;
+    color: black;
+    transform: scale(1.02);
+    transition: background-color 0.5s cubic-bezier(1, 0, 0, 0), color 0.5s cubic-bezier(1, 0, 0, 0), transform 0.1s ease;
+}
+
+.menu_list {
+    display: inherit;
+    margin: 0;
+    margin-right: 10px;
+    list-style-type: none;
+    justify-content: flex-end;
+
+}
+
+/* FIXME */
+/* Menu style */
+
+/* Footer style */
+
+/* La clase de loadedFooter es para que el footer no reciba estilos antes de que reciba los datos que debe contener.
+#footer es el placeholder que solo define dónde en el archivo se va a poner el footer.
+Los datos se ubican en el recurso "footer.html". */
+#footer.loadedFooter {
+    background-color: var(--outskirt-color);
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: var(--footer-height);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    flex-basis: calc(50% - 1em);
+}
+
+/* FIXME. Sería mejor si no estuviera. */
+#footer.NoResults {
+    min-height: 0;
+    position: absolute;
+    bottom: 0;
+}
+
+#footer a, #footer #copyright {
+    color: #fff;
+}
+
+/* FIXME */
+/* Footer style */
+
+/* Misc */
+
+.TrueHidden {
+    display: none !important;
+}
+
+.hidden {
+    visibility: hidden !important;
+}
+
+/* FIXME: @footer style: Esto no es atractivo ni ágil, hay que mejorarlo y hacer que no se necesite andar cambiando clases. */
+/* FIXME: @header style: El header tendrá que ser fijo en la parte superior de la pantalla y permanecer cuando el usuario se desplace. */

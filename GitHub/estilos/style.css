@@ -1,0 +1,124 @@
+:root {
+    --article-radius: 10px;
+    --ArticleWidth: 300px;
+  }
+  
+  * {
+    margin: 0;
+  }
+  
+  body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  }
+  
+  .main {
+    margin: 1%;
+    cursor: default;
+  }
+  
+  /* Estilo de formulario buscador (Y select categorías) */
+  
+    .category {
+      display: flex;
+      padding: 1em;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      border-radius: var(--article-radius);
+      width: fit-content;
+    }
+  
+    .category select {
+      border: none;
+      border-bottom: 1px solid black;
+    }
+  
+    .checkLabel, input[type="checkbox"] {
+      display: inline-block;
+    }
+  
+    form#buscador fieldset {
+      display: grid;
+      width: fit-content;
+      align-items: start;
+      justify-content: start;
+      margin: 1em;
+      padding: 1em;
+      border: 1px solid black;
+      border-radius: var(--article-radius);
+    }
+  
+    form#buscador input[type="submit"] {
+      justify-self: start;
+      align-self: start;
+    }
+  
+  /* Estilo de formulario buscador (Y select categorías) */
+  
+  /* Estilo de visualizador de listas */
+  
+    a.bebida_name, a.ingrediente_title {
+      color: #30d60f;
+      text-align: center;
+      padding: 0.5em;
+      background-color: #4d2856;
+      border-bottom-left-radius: var(--article-radius);
+      border-bottom-right-radius: var(--article-radius);
+    }
+  
+    #listado {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    article:hover, article:focus-within {
+      transform: scale(1.05);
+      transition: 0.25s;
+      a {
+        background-color: #fff;
+        color: #000;
+        transition: all 0.25s;
+      }
+    }
+  
+    article, article * {
+      transition: all 0.125s;
+    }
+  
+    article.bebida_banner {
+      display: inline-grid;
+      border: 1px solid rgb(209, 112, 14);
+      border-radius: var(--article-radius);
+      width: min-content;
+      height: var(--ArticleWidth);
+      margin: 1em auto;
+    }
+  
+    article.ingrediente_banner {
+      display: inline-grid;
+      border: 1px solid rgb(245, 245, 3);
+      border-radius: var(--article-radius);
+      width: min-content;
+      height: var(--ArticleWidth);
+      margin: 3em auto 6em auto;
+    }
+  
+    img.bebida_img {
+      height: calc(var(--ArticleWidth) - 2em);
+      width: calc(var(--ArticleWidth) - 2em);
+      border-top-left-radius: var(--article-radius);
+      border-top-right-radius: var(--article-radius);
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    img.ingrediente_img {
+      height: calc(var(--ArticleWidth) - 2em);
+      width: calc(var(--ArticleWidth) - 8em);
+      border-top-left-radius: var(--article-radius);
+      border-top-right-radius: var(--article-radius);
+      object-fit: cover;
+      object-position: center;
+    }
+  
+  /* Estilo de visualizador de listas */
